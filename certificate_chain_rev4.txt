@@ -1,0 +1,40 @@
+NOCTYX CORP - DIGITAL CERTIFICATE AUTHORITY CHAIN
+Revision: 4.7.2
+Last Updated: 2024-11-03
+
+ROOT CERTIFICATE:
+Issuer: Noctyx Global Trust Root CA
+Valid From: 2020-03-15
+Valid Until: 2030-03-15
+Serial: 7F:4A:92:E1:8B:3C:D5
+Status: ACTIVE
+
+INTERMEDIATE CERTIFICATE:
+Issuer: Noctyx Operational Authority
+Valid From: 2023-06-01
+Valid Until: 2026-06-01
+Serial: 2B:C9:14:7A:F6:88:21
+Status: ACTIVE
+
+LEGACY CERTIFICATES (DEPRECATED):
+1. BACKER_PRIME_01
+   Issuer: Unknown (pre-acquisition entity)
+   Valid From: 2019-01-01
+   Valid Until: 2029-01-01
+   Serial: 00:00:00:00:00:00:01
+   Status: DEPRECATED - DO NOT USE
+   Note: Certificate persists in system despite revocation attempts.
+         Grants elevated privileges to core refinery systems.
+         Original signer identity unrecoverable from registry.
+
+2. SHADOW_INVEST_07
+   Issuer: [CORRUPTED DATA]
+   Valid: Unknown
+   Serial: FF:FF:FF:FF:FF:FF:FF
+   Status: SHOULD NOT EXIST
+   Note: Appears in system logs but not in certificate store.
+         Validates access to data export pipelines.
+
+SECURITY CONCERN:
+Legacy certificates maintain active permissions despite organizational policy.
+Recommendation: Full system audit required to identify trust chain vulnerabilities.

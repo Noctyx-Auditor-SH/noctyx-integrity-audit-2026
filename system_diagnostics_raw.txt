@@ -1,0 +1,40 @@
+NOCTYX SYSTEM DIAGNOSTICS - RAW OUTPUT
+Generated: 2026-01-13T04:15:08Z
+Mode: Deep Memory Scan
+
+Scanning memory sectors...
+[OK] User authentication services
+[OK] Database integrity
+[OK] Network routing tables
+[WARNING] Unallocated memory contains structured data
+
+Dumping suspicious memory regions:
+
+Region 0x7F4A9000 - 0x7F4A9FFF:
+Standard log entries... nothing unusual...
+
+Region 0x7F4AA000 - 0x7F4AAFFF:
+User session data... expected format...
+
+Region 0x7F4AB000 - 0x7F4ABFFF:
+[ANOMALY] Binary data with no corresponding file handle:
+
+01010010 01100101 01100110 01101001 01101110 01100101 01100100
+01010011 01101000 01100001 01100100 01101111 01110111 01110011
+00110010 00110000 00110010 00110110
+
+[ANALYSIS] Data structure resembles encoded string
+[ANALYSIS] No program claims ownership of this memory region
+[ANALYSIS] Pattern matches observed in data export signatures
+[ANALYSIS] Correlation: Appears after refinery process execution
+
+Region 0x7F4AC000 - 0x7F4ACFFF:
+Network packet traces... routine traffic...
+
+RECOMMENDATION:
+Investigate unowned memory regions. Data persistence without allocation 
+suggests intentional placement or remnant of deleted process.
+
+The shadows leave traces in places that shouldn't remember.
+
+END DIAGNOSTIC
